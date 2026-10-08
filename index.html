@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sử Đảng – Ôn tập từng bài</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F4F8;--card:#fff;--ink:#16202F;--mute:#5E6B7E;--line:#DCE2EB;--red:#C21F2E;--redd:#861421;--gold:#F2B705;--goldd:#A97C00;--green:#2E9E5B;--greend:#1F7A43;--gbg:#DFF4E7;--rbg:#FCE3E5;--lock:#D3D9E3;--lockd:#B6BFCC;--c1:#B71C2B;--c1d:#7E1220;--c2:#2D5B3D;--c2d:#1D3D29;--sh:0 1px 2px rgba(20,32,50,.06),0 8px 20px rgba(20,32,50,.07);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D121B;--card:#161E2B;--ink:#ECF0F6;--mute:#98A5B8;--line:#27324A;--gbg:#14372A;--rbg:#3B1A20;--lock:#27324A;--lockd:#1B2436;--goldd:#F2B705;--c1:#C42A39;--c1d:#7A1621;--c2:#3A7A53;--c2d:#24503A;--sh:none}}
+:root[data-theme="dark"]{--bg:#0D121B;--card:#161E2B;--ink:#ECF0F6;--mute:#98A5B8;--line:#27324A;--gbg:#14372A;--rbg:#3B1A20;--lock:#27324A;--lockd:#1B2436;--goldd:#F2B705;--c1:#C42A39;--c1d:#7A1621;--c2:#3A7A53;--c2d:#24503A;--sh:none}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.5}
+button{font-family:inherit}
+.ch0{--ch:var(--c1);--chd:var(--c1d)}
+.ch1{--ch:var(--c2);--chd:var(--c2d)}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 48px}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:16px 0 12px}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:40px;height:40px;display:block}
+.brand b{display:block;font-size:20px;font-weight:800;line-height:1.1}
+.brand small{color:var(--mute);font-size:12px}
+.chips{display:flex;gap:6px}
+.chip{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:4px 10px;font-weight:800;font-size:14px;color:var(--ink);box-shadow:var(--sh)}
+button.chip{cursor:pointer}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tab{text-align:left;border:2px solid var(--line);border-bottom-width:4px;border-radius:16px;padding:12px;background:var(--card);color:var(--ink);cursor:pointer;display:flex;flex-direction:column;gap:5px;box-shadow:var(--sh)}
+.tab small{color:var(--mute);font-size:12px;font-weight:700}
+.tab b{font-size:14px;line-height:1.3;font-weight:700}
+.tab em{font-style:normal;font-size:12px;color:var(--mute)}
+.tp{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:auto}
+.tp i{display:block;height:100%;background:var(--gold);border-radius:4px}
+.tab.t0.on{border-color:var(--c1);border-bottom-color:var(--c1d);background:var(--c1);color:#fff}
+.tab.t1.on{border-color:var(--c2);border-bottom-color:var(--c2d);background:var(--c2);color:#fff}
+.tab.on small,.tab.on em{color:rgba(255,255,255,.82)}
+.tab.on .tp{background:rgba(255,255,255,.28)}
+.chhead{margin:22px 0 2px}
+.chhead small{color:var(--ch);font-weight:800;font-size:13px}
+.chhead h1{margin:2px 0 0;font-size:20px;line-height:1.35}
+.unit{margin-top:24px}
+.ban{color:#fff;border-radius:18px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start;box-shadow:0 4px 0 var(--chd);background-color:var(--ch);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpolygon points='32,12 36,25 50,25 39,33 43,47 32,39 21,47 25,33 14,25 28,25' fill='white' fill-opacity='.08'/%3E%3C/svg%3E")}
+.ban small{display:block;opacity:.8;font-size:12px;font-weight:600}
+.ban b{font-size:16px;line-height:1.35;font-weight:700}
+.ban span{text-align:right;color:var(--gold);font-weight:800;white-space:nowrap;font-size:14px}
+.path{position:relative;padding:16px 0 0}
+.path:before{content:'';position:absolute;left:50%;top:36px;bottom:40px;width:6px;margin-left:-3px;background:var(--line);border-radius:3px}
+.nw{position:relative;display:flex;justify-content:center;height:92px;align-items:flex-start}
+.node{position:relative;z-index:1;width:64px;height:64px;border-radius:50%;border:0;font-weight:800;font-size:20px;color:#fff;cursor:pointer}
+.node.cur{background:var(--ch);box-shadow:0 6px 0 var(--chd)}
+.node.done{background:var(--gold);box-shadow:0 6px 0 var(--goldd);color:#3a2b00}
+.node.lock{background:var(--lock);box-shadow:0 6px 0 var(--lockd);color:var(--mute);cursor:not-allowed}
+.node.go:after{content:'';position:absolute;inset:-8px;border-radius:50%;border:3px solid var(--ch);animation:ring 2s ease-out infinite}
+@keyframes ring{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.2);opacity:0}}
+.node:not(:disabled):active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.lbl{position:absolute;left:calc(50% + 46px);right:0;top:4px;font-size:13px;line-height:1.35;display:flex;flex-direction:column}
+.lbl b{font-size:14px}
+.lbl span{color:var(--mute)}
+.lbl .stars{font-style:normal;color:var(--goldd);letter-spacing:2px}
+.lbl .gl{font-style:normal;color:var(--ch);font-weight:800}
+button:focus-visible{outline:3px solid #2F80ED;outline-offset:3px}
+.top{display:flex;align-items:center;gap:12px;padding:16px 0 0}
+.x{background:none;border:0;font-size:20px;color:var(--mute);cursor:pointer;padding:4px}
+.bar{flex:1;height:16px;background:var(--line);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:8px;transition:width .35s;background-image:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,0) 60%)}
+.hearts{display:flex;gap:5px;align-items:center;color:var(--red);font-weight:800;font-size:17px}
+.qcard{padding-bottom:230px}
+.qtag{margin-top:24px;color:var(--ch);font-weight:800;font-size:13px}
+.qcard h2{font-size:22px;line-height:1.4;margin:6px 0 20px}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:12px 14px;margin-bottom:12px;border:2px solid var(--line);border-bottom-width:4px;border-radius:14px;background:var(--card);color:var(--ink);font-size:16px;cursor:pointer;box-shadow:var(--sh)}
+.opt:disabled{color:var(--ink);opacity:1;cursor:default}
+.k{flex:none;width:30px;height:30px;border-radius:9px;border:2px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:13px;color:var(--mute)}
+.opt.sel{border-color:var(--gold);background:rgba(242,183,5,.13)}
+.opt.sel .k{background:var(--gold);border-color:var(--gold);color:#3a2b00}
+.opt.ok{border-color:var(--green);background:var(--gbg)}
+.opt.ok .k{background:var(--green);border-color:var(--green);color:#fff}
+.opt.bad{border-color:var(--red);background:var(--rbg)}
+.opt.bad .k{background:var(--red);border-color:var(--red);color:#fff}
+.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.pop{animation:pop .3s}
+@keyframes pop{50%{transform:scale(1.03)}}
+.foot{position:fixed;left:0;right:0;bottom:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));border-top:2px solid var(--line);background:var(--card)}
+.foot.ok{background:var(--gbg);border-color:var(--green)}
+.foot.bad{background:var(--rbg);border-color:var(--red)}
+.foot.ok,.foot.bad{animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(28px);opacity:.3}}
+.foot .in{max-width:560px;margin:0 auto}
+.fbh{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.fbh b{font-size:18px}
+.ico{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.foot.ok .ico{background:var(--green)}
+.foot.bad .ico{background:var(--red)}
+.fb{font-size:14px;margin-bottom:12px}
+.btn{display:block;width:100%;padding:14px;border:0;border-radius:14px;font-weight:800;font-size:16px;color:#fff;background:var(--green);box-shadow:0 4px 0 var(--greend);cursor:pointer;margin-bottom:6px}
+.btn.red{background:var(--red);box-shadow:0 4px 0 var(--redd)}
+.btn.ghost{background:transparent;color:var(--mute);box-shadow:none}
+.btn:disabled{background:var(--lock);box-shadow:0 4px 0 var(--lockd);color:var(--mute);cursor:not-allowed}
+.btn:not(:disabled):active{transform:translateY(3px);box-shadow:none}
+.res{text-align:center;padding-top:48px}
+.badge{width:120px;height:120px;margin:0 auto;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-size:62px;color:#fff;box-shadow:0 8px 0 var(--goldd)}
+.badge.h{background:var(--red);box-shadow:0 8px 0 var(--redd)}
+.rs{font-size:34px;color:var(--gold);letter-spacing:8px;margin:18px 0 0}
+.res h1{margin:8px 0 4px;font-size:26px}
+.res p{color:var(--mute);margin:0 0 22px}
+.stats{display:flex;gap:12px;justify-content:center;margin-bottom:28px}
+.st{flex:1;max-width:160px;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:10px;box-shadow:var(--sh)}
+.st b{display:block;font-size:22px}
+.st small{color:var(--mute)}
+.cf{position:fixed;top:-16px;width:9px;height:14px;border-radius:2px;animation:fall 2.8s linear forwards;z-index:5;pointer-events:none}
+@keyframes fall{to{transform:translateY(108vh) rotate(560deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.cf{display:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const RAW=`
+#Mục 1.1|Bối cảnh và các phong trào yêu nước|Trước 1920
+Quốc tế Cộng sản (Quốc tế III) do ai đứng đầu và thành lập khi nào?|V.I.Lênin, tháng 3/1919|C.Mác, năm 1864|Ph.Ăngghen, năm 1889|Hồ Chí Minh, năm 1930|Là bộ tham mưu lãnh đạo phong trào vô sản và giải phóng dân tộc.
+Đại hội II Quốc tế Cộng sản (1920) thông qua văn kiện nào của Lênin?|Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa|Tuyên ngôn của Đảng Cộng sản|Nhà nước và cách mạng|Chánh cương vắn tắt
+Pháp nổ súng xâm lược tại Đà Nẵng vào ngày nào?|1/9/1858|6/6/1884|17/10/1887|2/9/1945
+Triều đình nhà Nguyễn hoàn toàn đầu hàng Pháp qua hiệp ước nào?|Hiệp ước Patơnốt (6/6/1884)|Hiệp ước Nhâm Tuất (1862)|Hiệp ước Giáp Tuất (1874)|Hiệp ước Hácmăng (1883)
+Liên bang Đông Dương được thành lập ngày nào?|17/10/1887|1/9/1858|6/6/1884|19/5/1941
+Chính sách "chia để trị" chia Việt Nam thành mấy kỳ?|3 kỳ: Bắc Kỳ, Trung Kỳ, Nam Kỳ|2 kỳ|4 kỳ|5 kỳ
+Năm 1929, số công nhân Việt Nam là bao nhiêu?|Hơn 22 vạn người|Hơn 5 vạn người|Hơn 100 vạn người|Hơn 2 vạn người
+Mâu thuẫn chủ yếu nhất của xã hội Việt Nam thời Pháp thuộc là gì?|Giữa toàn thể dân tộc Việt Nam với thực dân Pháp và phong kiến phản động|Giữa công nhân với tư sản|Giữa nông dân với địa chủ|Giữa tư sản dân tộc với tư sản mại bản
+Khởi nghĩa Hương Khê (kết thúc phong trào Cần Vương, 1896) do ai lãnh đạo?|Phan Đình Phùng|Hoàng Hoa Thám|Nguyễn Thái Học|Phan Bội Châu
+Khởi nghĩa nông dân Yên Thế (1884–1913) do ai lãnh đạo?|Hoàng Hoa Thám|Phan Đình Phùng|Phan Châu Trinh|Nguyễn Thái Học
+Phong trào Đông Du (1905–1908) và Việt Nam Quang phục hội (1912) gắn với ai?|Phan Bội Châu|Phan Châu Trinh|Nguyễn Thái Học|Hoàng Hoa Thám|Đây là xu hướng bạo động.
+Phan Châu Trinh theo xu hướng nào?|Cải cách, khởi xướng phong trào Duy Tân|Bạo động vũ trang|Khởi nghĩa theo lối ám sát cá nhân|Cần Vương cứu nước|Ông mở Trường Đông Kinh Nghĩa Thục (12/1907); đỉnh cao là phong trào chống thuế ở Trung Kỳ (1908).
+Việt Nam Quốc dân Đảng (12/1927) do ai lãnh đạo, thất bại hoàn toàn sau cuộc khởi nghĩa nào?|Nguyễn Thái Học; Khởi nghĩa Yên Bái (2/1930)|Phan Bội Châu; Khởi nghĩa Bắc Sơn|Nguyễn Thái Học; Khởi nghĩa Nam Kỳ|Phan Đình Phùng; Khởi nghĩa Hương Khê
+Nguyên nhân thất bại chung của các phong trào yêu nước đầu thế kỷ XX là gì?|Thiếu đường lối đúng đắn, tổ chức vững mạnh và phương pháp đấu tranh thích hợp|Thiếu sự ủng hộ của nhân dân|Thiếu vũ khí hiện đại|Các lãnh tụ bất đồng nội bộ
+#Mục 1.1c|Nguyễn Ái Quốc chuẩn bị thành lập Đảng|1911–1929
+Nguyễn Ái Quốc ra đi tìm đường cứu nước vào năm nào?|1911|1905|1919|1920
+Tháng 6/1919, Nguyễn Ái Quốc gửi văn bản nào đến Hội nghị Vécxây?|Yêu sách của nhân dân An Nam (8 điểm)|Đường Cách mệnh|Bản án chế độ thực dân Pháp|Chánh cương vắn tắt|Thay mặt Hội những người An Nam yêu nước.
+Tháng 7/1920, Nguyễn Ái Quốc đọc Luận cương của Lênin trên báo nào?|L'Humanité (Nhân đạo)|Le Paria (Người cùng khổ)|Búa liềm|Tuyên đạt
+Tại Đại hội Tour (12/1920), Nguyễn Ái Quốc đã làm gì để trở thành người cộng sản đầu tiên của Việt Nam?|Tán thành gia nhập Quốc tế III, tham gia thành lập Đảng Cộng sản Pháp|Thành lập Hội Việt Nam Cách mạng Thanh niên|Dự Đại hội II Quốc tế Cộng sản|Thành lập Cộng sản đoàn
+Nguyễn Ái Quốc viết báo Le Paria năm nào, và lập Ban Nghiên cứu thuộc địa của Đảng Cộng sản Pháp năm nào?|1921 và 1922|1911 và 1919|1925 và 1927|1922 và 1928
+Tác phẩm nào (2/1927, Quảng Châu) là cuốn sách chính trị đầu tiên xác định con đường, mục tiêu, lực lượng, phương pháp cách mạng?|Đường Cách mệnh|Chung quanh vấn đề chiến sách mới|Vấn đề dân cày|Kháng chiến nhất định thắng lợi|Có luận điểm: "Cách mạng trước hết phải có đảng cách mệnh".
+Tháng 2/1925, Nguyễn Ái Quốc thành lập tổ chức nào?|Cộng sản đoàn|Tân Việt Cách mạng Đảng|Hội Văn hóa cứu quốc|Đông Dương Cộng sản Liên đoàn
+Hội Việt Nam Cách mạng Thanh niên thành lập khi nào, ở đâu?|Tháng 6/1925, Quảng Châu|Tháng 2/1925, Hồng Kông|Tháng 6/1929, Hà Nội|Tháng 3/1935, Ma Cao
+Phong trào "Vô sản hóa" (từ 29/9/1928) nhằm mục đích gì?|Đưa hội viên vào nhà máy, đồn điền để truyền bá chủ nghĩa Mác - Lênin|Thành lập chi bộ ở nước ngoài|Đưa thanh niên sang Nhật học|Phát triển đảng viên trong quân đội
+#Mục 1.2|Thành lập Đảng và Cương lĩnh đầu tiên|1929–1930
+Đông Dương Cộng sản Đảng thành lập ngày nào, ở đâu?|17/6/1929, số 312 Khâm Thiên (Hà Nội)|11/1929, Khánh Hội (Sài Gòn)|9/1929, Đức Thọ (Hà Tĩnh)|3/1929, số 5D Hàm Long|Ra đời trên cơ sở Chi bộ Cộng sản đầu tiên ở số 5D Hàm Long (3/1929); báo Búa liềm.
+An Nam Cộng sản Đảng ra đời khi nào, ở đâu, xuất bản gì?|Tháng 11/1929, Khánh Hội (Sài Gòn), Tạp chí Bônsơvích|17/6/1929, Hà Nội, báo Búa liềm|Tháng 12/1929, Đức Thọ, báo Tuyên đạt|Tháng 11/1929, Hà Nội, báo Thanh niên
+Đông Dương Cộng sản Liên đoàn hình thành từ sự cải tổ của tổ chức nào?|Tân Việt Cách mạng Đảng|Việt Nam Quốc dân Đảng|Hội Việt Nam Cách mạng Thanh niên|Việt Nam Quang phục hội|Ra Tuyên đạt (9/1929), hoàn tất cuối 12/1929 tại Đức Thọ (Hà Tĩnh).
+Hội nghị thành lập Đảng diễn ra khi nào, ở đâu?|6/1–7/2/1930, Cửu Long (Hồng Kông)|3/2/1930, Hà Nội|14–31/10/1930, Hương Cảng|3/1935, Ma Cao
+Ai chủ trì Hội nghị thành lập Đảng với tư cách đại biểu Quốc tế Cộng sản?|Nguyễn Ái Quốc|Trần Phú|Lê Hồng Phong|Hà Huy Tập
+Đại biểu của Đông Dương Cộng sản Đảng dự Hội nghị thành lập Đảng là ai?|Trịnh Đình Cửu, Nguyễn Đức Cảnh|Châu Văn Liêm, Nguyễn Thiệu|Trần Phú, Lê Hồng Phong|Hà Huy Tập, Nguyễn Văn Cừ|Châu Văn Liêm, Nguyễn Thiệu là đại biểu An Nam Cộng sản Đảng.
+Tên chính đảng được thống nhất tại hội nghị đầu năm 1930 là gì?|Đảng Cộng sản Việt Nam|Đảng Cộng sản Đông Dương|Đảng Lao động Việt Nam|Việt Nam Quốc dân Đảng
+Văn kiện nào KHÔNG nằm trong các văn kiện do Nguyễn Ái Quốc soạn, được thông qua tại hội nghị đầu năm 1930?|Luận cương chính trị|Chánh cương vắn tắt|Sách lược vắn tắt|Điều lệ vắn tắt|Còn có Chương trình tóm tắt. Luận cương chính trị ra đời 10/1930.
+Ngày 24/2/1930, tổ chức nào chính thức gia nhập Đảng?|Đông Dương Cộng sản Liên đoàn|An Nam Cộng sản Đảng|Tân Việt Cách mạng Đảng|Việt Nam Quốc dân Đảng
+Đại hội nào quyết định lấy ngày 3/2 làm ngày kỷ niệm thành lập Đảng?|Đại hội III (1960)|Đại hội I (1935)|Đại hội II (1951)|Đại hội IV (1976)
+Đường lối chiến lược của Cương lĩnh chính trị đầu tiên (2/1930) là gì?|Làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản|Làm cách mạng xã hội chủ nghĩa ngay|Làm cách mạng ruộng đất trước, giải phóng dân tộc sau|Cải cách dần dần dưới chế độ thuộc địa
+Nhiệm vụ nào được đặt ở vị trí hàng đầu trong Cương lĩnh 2/1930?|Chống đế quốc, giành độc lập dân tộc|Cách mạng ruộng đất|Xây dựng chủ nghĩa xã hội|Thành lập chính phủ liên hiệp
+Cương lĩnh 2/1930 chủ trương giao sản nghiệp lớn của tư bản đế quốc cho ai, và thi hành luật ngày làm mấy giờ?|Chính phủ công nông binh; 8 giờ|Địa chủ yêu nước; 10 giờ|Tư sản dân tộc; 8 giờ|Chính phủ công nông binh; 12 giờ|Cũng chủ trương thủ tiêu quốc trái, chia ruộng đất của đế quốc cho dân cày nghèo.
+Lực lượng cách mạng cơ bản theo Cương lĩnh 2/1930 là ai?|Công nhân và nông dân|Nông dân và tiểu tư sản|Công nhân và tư sản dân tộc|Trí thức và tiểu tư sản|Đoàn kết tiểu tư sản, trí thức, trung nông.
+Với phú nông, trung - tiểu địa chủ và tư bản dân tộc chưa rõ mặt phản cách mạng, Cương lĩnh chủ trương gì?|Lợi dụng hoặc trung lập|Đánh đổ ngay|Thu hết ruộng đất|Liên minh bền vững
+Phương pháp cách mạng theo Cương lĩnh 2/1930 là gì?|Bạo lực cách mạng của quần chúng, không thỏa hiệp|Đấu tranh nghị trường hòa bình|Ám sát cá nhân|Thương lượng với Pháp
+Ý nghĩa của Cương lĩnh chính trị đầu tiên là gì?|Chấm dứt khủng hoảng về đường lối, mở ra bước ngoặt vĩ đại cho cách mạng Việt Nam|Thành lập chính quyền công nông|Hoàn thành cách mạng dân tộc dân chủ|Đưa cả nước tiến lên chủ nghĩa xã hội
+#Mục 1.3 – 1.4|Cao trào 1930–1931, Luận cương và khôi phục lực lượng|1930–1935
+Ngày 1/5/1930 diễn ra sự kiện gì trên toàn quốc?|Đấu tranh kỷ niệm Ngày Quốc tế Lao động|Khởi nghĩa Yên Bái|Thành lập Mặt trận Việt Minh|Đại hội I của Đảng
+Đỉnh cao của cao trào 1930–1931 diễn ra ở đâu, khi nào?|Nghệ An - Hà Tĩnh, tháng 8–9/1930|Phú Riềng, tháng 2/1930|Nam Định, tháng 5/1930|Nhà Bè, tháng 12/1930
+Ở Nghệ - Tĩnh, hình thức chính quyền nào được lập ở nông thôn?|Ủy ban tự quản kiểu Xô viết|Ủy ban nhân dân|Hội đồng nhân dân|Ủy ban khởi nghĩa
+Tháng 4/1931, Đảng gặp tổn thất gì?|Toàn bộ Ban Chấp hành Trung ương bị bắt|Đảng bị giải tán|Trần Phú hy sinh|Đại hội I bị phá
+Hội nghị Trung ương 1 (10/1930) họp ở đâu, đổi tên Đảng thành gì?|Hương Cảng; Đảng Cộng sản Đông Dương|Ma Cao; Đảng Cộng sản Việt Nam|Thượng Hải; Đảng Lao động Việt Nam|Cao Bằng; Đảng Cộng sản Đông Dương|Họp 14–31/10/1930.
+Ai được bầu làm Tổng Bí thư tại Hội nghị Trung ương 1 (10/1930)?|Trần Phú|Lê Hồng Phong|Hà Huy Tập|Nguyễn Văn Cừ
+Luận cương 10/1930 xác định cách mạng Đông Dương lúc đầu có tính chất gì?|Cách mạng tư sản dân quyền, có tính chất thổ địa và phản đế|Cách mạng xã hội chủ nghĩa|Cách mạng giải phóng dân tộc dân chủ mới|Cách mạng ruộng đất thuần túy|Sau đó tiến thẳng lên xã hội chủ nghĩa, bỏ qua thời kỳ tư bản.
+Luận cương 10/1930 khẳng định vấn đề nào là "cái cốt của cách mạng tư sản dân quyền"?|Vấn đề thổ địa|Vấn đề dân tộc|Vấn đề chính quyền|Vấn đề liên minh
+Hạn chế của Luận cương 10/1930 là gì?|Không đặt giải phóng dân tộc lên hàng đầu, nặng đấu tranh giai cấp và cách mạng ruộng đất|Chủ trương đoàn kết dân tộc rộng rãi|Liên minh với tư sản dân tộc|Đề cao mâu thuẫn dân tộc hơn giai cấp
+Chương trình hành động của Đảng (nhằm khôi phục tổ chức) ban hành ngày nào?|15/6/1932|6/9/1931|1/5/1930|12/3/1945
+Tổng Bí thư Trần Phú hy sinh ngày nào?|6/9/1931|15/6/1932|3/2/1930|14/10/1930
+Ban Chỉ huy ở ngoài của Đảng thành lập khi nào, dưới sự chỉ đạo của ai?|Đầu năm 1934, Quốc tế Cộng sản|Tháng 3/1935, Đảng Cộng sản Pháp|Tháng 7/1936, Quốc tế Cộng sản|Năm 1941, Hồ Chí Minh
+Đại hội đại biểu lần thứ I của Đảng họp ở đâu, ai làm Tổng Bí thư?|Tháng 3/1935 tại Ma Cao; Lê Hồng Phong|Tháng 3/1935 tại Hương Cảng; Trần Phú|Tháng 7/1936 tại Thượng Hải; Hà Huy Tập|Tháng 5/1941 tại Cao Bằng; Trường Chinh|Đánh dấu sự phục hồi hệ thống tổ chức của Đảng.
+#Mục 1.5|Phong trào Dân chủ|1936–1939
+Đại hội VII Quốc tế Cộng sản (7/1935) chỉ đạo lập mặt trận nào?|Mặt trận Nhân dân chống phát xít|Mặt trận Việt Minh|Mặt trận dân tộc thống nhất phản đế|Hội Liên Việt
+Hội nghị Trung ương tháng 7/1936 họp ở đâu, ai chủ trì?|Thượng Hải; Lê Hồng Phong|Hương Cảng; Trần Phú|Ma Cao; Hà Huy Tập|Bà Điểm; Nguyễn Văn Cừ
+Kẻ thù trước mắt của cách mạng theo Hội nghị 7/1936 là ai?|Phản động thuộc địa và tay sai|Đế quốc Pháp và phong kiến|Phát xít Nhật|Quân Tưởng và Việt Quốc
+Mục tiêu đấu tranh trước mắt thời kỳ 1936–1939 là gì?|Tự do, dân chủ, cơm áo, hòa bình|Độc lập dân tộc|Cách mạng ruộng đất|Đánh đổ đế quốc
+Hội nghị 7/1936 tạm gác những khẩu hiệu nào?|"Đánh đổ đế quốc" và "cách mạng ruộng đất"|"Tự do dân chủ"|"Cơm áo hòa bình"|"Giảm tô giảm tức"
+Mặt trận nào được thành lập thời kỳ 1936–1939?|Mặt trận Dân chủ Đông Dương|Mặt trận Việt Minh|Mặt trận Liên Việt|Mặt trận Tổ quốc Việt Nam
+Phương pháp đấu tranh thời kỳ 1936–1939 là gì?|Kết hợp công khai, hợp pháp, nửa hợp pháp với bí mật, bất hợp pháp|Chỉ hoạt động bí mật|Chỉ hoạt động hợp pháp|Khởi nghĩa vũ trang
+Văn kiện nào (10/1936) khẳng định giải phóng dân tộc không nhất thiết gắn chặt với cách mạng điền địa?|Chung quanh vấn đề chiến sách mới|Vấn đề dân cày|Tự chỉ trích|Đường Cách mệnh|Bước đầu khắc phục hạn chế của Luận cương 10/1930, trở lại tinh thần Cương lĩnh 2/1930.
+Ai làm Tổng Bí thư từ 8/1936 đến 3/1938, và ai kế nhiệm?|Hà Huy Tập; Nguyễn Văn Cừ|Lê Hồng Phong; Hà Huy Tập|Trần Phú; Lê Hồng Phong|Nguyễn Văn Cừ; Trường Chinh
+Tác phẩm Vấn đề dân cày (1938) là của ai?|Qua Ninh (Trường Chinh) và Vân Đình (Võ Nguyên Giáp)|Hà Huy Tập|Nguyễn Văn Cừ|Nguyễn Ái Quốc
+Tác phẩm Tự chỉ trích (1939) là của ai?|Tổng Bí thư Nguyễn Văn Cừ|Hà Huy Tập|Trường Chinh|Lê Hồng Phong|Hà Huy Tập viết Tờrốtxky và phản cách mạng (1937).
+Cuộc mít tinh kỷ niệm Quốc tế Lao động 1/5/1938 diễn ra ở đâu?|Khu Đấu Xảo (Hà Nội)|Quảng trường Ba Đình|Phố Ôn Như Hầu|Pác Bó (Cao Bằng)|Cùng thời kỳ có Hội truyền bá quốc ngữ (1937).
+Ý nghĩa của phong trào dân chủ 1936–1939 là gì?|Rèn luyện đội quân chính trị hàng triệu người, chuẩn bị cho Cách mạng Tháng Tám|Giành chính quyền trong cả nước|Đánh bại thực dân Pháp|Lập nhà nước công nông
+#Mục 1.6a–b|Chuyển hướng chiến lược và chuẩn bị lực lượng|1939–1945
+Hội nghị Trung ương nào hoàn chỉnh sự chuyển hướng chỉ đạo chiến lược, do Nguyễn Ái Quốc chủ trì?|Hội nghị Trung ương 8 (5/1941, Cao Bằng)|Hội nghị Trung ương 6 (11/1939, Bà Điểm)|Hội nghị Trung ương 7 (11/1940, Đình Bảng)|Hội nghị Trung ương 1 (10/1930)|Trường Chinh làm Tổng Bí thư.
+Hội nghị Trung ương 6 họp ở đâu, Hội nghị Trung ương 7 họp ở đâu?|Bà Điểm; Đình Bảng|Đình Bảng; Bà Điểm|Võng La; Bà Điểm|Cao Bằng; Đình Bảng
+Hội nghị Trung ương 8 đặt nhiệm vụ nào lên hàng đầu, cấp bách nhất?|Giải phóng dân tộc|Cách mạng ruộng đất|Xây dựng chủ nghĩa xã hội|Chống phong kiến
+Mâu thuẫn chủ yếu lúc này (theo Hội nghị 8) là gì?|Giữa dân tộc Việt Nam với phát xít Pháp - Nhật|Giữa nông dân và địa chủ|Giữa công nhân và tư sản|Giữa Pháp và Nhật
+Về ruộng đất, Hội nghị 8 thay khẩu hiệu cách mạng ruộng đất bằng gì?|Tịch thu ruộng đất của đế quốc, Việt gian chia cho dân cày nghèo; giảm tô, giảm tức|Chia đều ruộng đất cho mọi người|Tịch thu mọi ruộng đất của địa chủ|Giữ nguyên chế độ ruộng đất
+Theo tài liệu, Mặt trận Việt Nam độc lập đồng minh (Việt Minh) được thành lập ngày nào?|25/10/1941|3/2/1930|15/5/1945|2/9/1945|Các đoàn thể mang tên "Cứu quốc".
+Chính quyền sau cách mạng theo Hội nghị 8 là nước gì?|Việt Nam Dân chủ Cộng hòa|Cộng hòa Xô viết|Việt Nam Cộng hòa|Liên bang Đông Dương|Là chính quyền tân dân chủ của chung toàn thể dân tộc.
+Hội nghị 8 xác định nhiệm vụ trung tâm là gì?|Chuẩn bị khởi nghĩa vũ trang|Xây dựng chủ nghĩa xã hội|Cải cách ruộng đất|Đấu tranh nghị trường|Đi từ khởi nghĩa từng phần tiến lên tổng khởi nghĩa.
+Thứ tự đúng của ba cuộc khởi nghĩa, binh biến 1940–1941 là?|Bắc Sơn (27/9/1940) → Nam Kỳ (23/11/1940) → Đô Lương (13/1/1941)|Nam Kỳ → Bắc Sơn → Đô Lương|Đô Lương → Bắc Sơn → Nam Kỳ|Bắc Sơn → Đô Lương → Nam Kỳ
+Lê Hồng Phong hy sinh ở đâu, khi nào?|Côn Đảo, tháng 9/1942|Hà Nội, tháng 8/1941|Sài Gòn, tháng 6/1931|Cao Bằng, năm 1945|Tháng 8/1941 là thời điểm Nguyễn Văn Cừ, Hà Huy Tập... bị xử bắn.
+Đề cương về văn hóa Việt Nam (1943) nêu ba nguyên tắc nào?|Dân tộc, khoa học, đại chúng|Dân chủ, tự do, bình đẳng|Độc lập, tự do, hạnh phúc|Yêu nước, đoàn kết, sáng tạo|Ban Thường vụ họp ở Võng La (2/1943); năm 1944 lập Hội Văn hóa cứu quốc và Đảng Dân chủ Việt Nam (6/1944).
+Đội Việt Nam Tuyên truyền Giải phóng quân thành lập ngày nào, ai chỉ huy?|22/12/1944; Võ Nguyên Giáp|19/12/1946; Hồ Chí Minh|15/5/1945; Võ Nguyên Giáp|22/12/1944; Trường Chinh
+Hai trận đánh đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân là gì?|Phai Khắt (25/12) và Nà Ngần (26/12/1944)|Bắc Sơn và Vũ Nhai|Đô Lương và Nam Kỳ|Điện Biên Phủ và Biên giới
+Khu giải phóng Việt Bắc thành lập ngày 4/6/1945 gồm mấy tỉnh?|6 tỉnh|4 tỉnh|8 tỉnh|10 tỉnh
+#Mục 1.6c–d|Tổng khởi nghĩa Tháng Tám và Tuyên ngôn Độc lập|1945
+Nhật đảo chính Pháp ở Đông Dương vào ngày nào?|9/3/1945|12/3/1945|15/8/1945|19/8/1945
+Chỉ thị 12/3/1945 "Nhật, Pháp bắn nhau và hành động của chúng ta" xác định kẻ thù cụ thể trước mắt là ai?|Phát xít Nhật|Thực dân Pháp|Quân Tưởng|Phong kiến
+Khẩu hiệu nào được đẩy mạnh trong cao trào kháng Nhật cứu nước?|"Phá kho thóc, giải quyết nạn đói"|"Người cày có ruộng"|"Tăng gia sản xuất"|"Toàn dân kháng chiến"
+Việt Nam Giải phóng quân được thống nhất lực lượng vũ trang ngày nào?|15/5/1945|22/12/1944|4/6/1945|15/8/1945
+Nhật đầu hàng Đồng minh không điều kiện ngày nào?|15/8/1945|9/3/1945|19/8/1945|2/9/1945|Đêm 13/8/1945, Ủy ban Khởi nghĩa toàn quốc ban bố Quân lệnh số 1.
+Đại hội Quốc dân Tân Trào (16/8/1945) quyết định gì?|Tổng khởi nghĩa; bầu Ủy ban Dân tộc giải phóng do Hồ Chí Minh làm Chủ tịch|Thành lập Quốc hội khóa I|Thông qua Hiến pháp đầu tiên|Thành lập Mặt trận Việt Minh|Trước đó, Hội nghị toàn quốc của Đảng họp ngày 14–15/8.
+Cách mạng giành chính quyền ở Hà Nội, Huế, Sài Gòn lần lượt vào ngày nào?|19/8, 23/8, 25/8|19/8, 25/8, 23/8|23/8, 19/8, 25/8|25/8, 23/8, 19/8
+Vua Bảo Đại tuyên bố thoái vị ngày nào?|30/8/1945|19/8/1945|2/9/1945|25/8/1945
+Ngày 2/9/1945 diễn ra sự kiện gì?|Hồ Chí Minh đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình|Tổng tuyển cử|Thông qua Hiến pháp|Tuyên bố toàn quốc kháng chiến|Khai sinh nước Việt Nam Dân chủ Cộng hòa.
+Cách mạng Tháng Tám có tính chất gì?|Cách mạng giải phóng dân tộc mang tính dân chủ mới điển hình|Cách mạng xã hội chủ nghĩa|Cách mạng tư sản dân quyền|Cách mạng ruộng đất
+Một ý nghĩa của Cách mạng Tháng Tám là gì?|Lập nhà nước dân chủ nhân dân đầu tiên ở Đông Nam Á|Hoàn thành thống nhất đất nước|Xóa bỏ hoàn toàn nghèo đói|Giải phóng hoàn toàn Đông Dương|Chấm dứt gần 1 thế kỷ nô lệ Pháp - Nhật, xóa bỏ chế độ phong kiến nghìn năm.
+Bài học kinh nghiệm thứ nhất của Cách mạng Tháng Tám là gì?|Giương cao ngọn cờ giải phóng dân tộc|Xây dựng quân đội chính quy|Cải cách ruộng đất|Đấu tranh nghị trường
+Khối đại đoàn kết toàn dân trong Cách mạng Tháng Tám được xây dựng thế nào?|Trong Mặt trận Việt Minh, trên nền tảng liên minh công - nông|Trong Mặt trận Liên Việt, dựa vào tư sản|Trong Mặt trận Dân chủ, dựa vào địa chủ|Chỉ trong giai cấp công nhân|Hai bài học còn lại: kết hợp bạo lực cách mạng, chớp đúng thời cơ; xây dựng Đảng cách mạng tiên phong.
+#Mục 2.1a–c|Xây dựng và bảo vệ chính quyền cách mạng|1945–1946
+Sau Cách mạng Tháng Tám, tình thế nước ta được ví như thế nào?|"Ngàn cân treo sợi tóc"|"Nước sôi lửa bỏng"|"Thế chân vạc"|"Lửa cháy đồng"
+Từ vĩ tuyến 16 ra Bắc có bao nhiêu quân Tưởng, kèm tay sai nào?|20 vạn; Việt Quốc, Việt Cách|2 vạn; Việt Minh|6 vạn; Việt Quốc|20 vạn; Liên Việt|Khẩu hiệu "diệt Cộng, cầm Hồ".
+Từ vĩ tuyến 16 vào Nam có bao nhiêu quân Anh - Ấn, mở đường cho ai?|2 vạn; thực dân Pháp|20 vạn; quân Nhật|2 vạn; quân Tưởng|6 vạn; thực dân Pháp|Pháp nổ súng xâm lược tại Sài Gòn ngày 23/9/1945.
+Khó khăn sau Cách mạng Tháng Tám: nạn đói làm chết bao nhiêu người, bao nhiêu % dân mù chữ?|2 triệu người; 95%|1 triệu người; 50%|2 triệu người; 50%|500 nghìn người; 95%|Còn có 6 vạn quân Nhật chờ giải giáp; 50% ruộng đất bỏ hoang.
+Chỉ thị Kháng chiến kiến quốc ra ngày nào?|25/11/1945|12/3/1945|3/3/1946|12/12/1946
+Chỉ thị Kháng chiến kiến quốc xác định kẻ thù chính là ai?|Thực dân Pháp xâm lược|Quân Tưởng|Phát xít Nhật|Phong kiến
+Khẩu hiệu chiến lược của Chỉ thị Kháng chiến kiến quốc là gì?|"Dân tộc trên hết, Tổ quốc trên hết"|"Tất cả cho tiền tuyến"|"Độc lập hay là chết"|"Không có gì quý hơn độc lập, tự do"
+Về ngoại giao, Chỉ thị Kháng chiến kiến quốc chủ trương gì?|"Hoa - Việt thân thiện" với Tưởng; "độc lập về chính trị, nhân nhượng về kinh tế" với Pháp|Đối đầu cả hai|Hòa với Pháp, đánh Tưởng|Thân thiện với Pháp, đối đầu Tưởng
+Những biện pháp nào nằm trong diệt giặc đói?|Hũ gạo tiết kiệm, Tuần lễ vàng, Quỹ độc lập, giảm tô 25%|Bình dân học vụ|Cải cách ruộng đất|Thu thuế thân|Đầu năm 1946 nạn đói bị đẩy lùi.
+Nha Bình dân học vụ xóa mù chữ cho bao nhiêu người đến cuối 1946?|Hơn 2,5 triệu người|Hơn 1 triệu người|Hơn 500 nghìn người|Hơn 5 triệu người
+Tổng tuyển cử bầu Quốc hội khóa I diễn ra ngày nào, bầu bao nhiêu đại biểu?|6/1/1946; 333 đại biểu|2/3/1946; 333 đại biểu|6/1/1946; 89 đại biểu|9/11/1946; 333 đại biểu|Có 89% cử tri đi bầu.
+Hiến pháp đầu tiên của nước ta được thông qua ngày nào?|9/11/1946|2/3/1946|6/1/1946|2/9/1945|Ngày 2/3/1946, Quốc hội lập Chính phủ chính thức do Hồ Chí Minh làm Chủ tịch.
+Hội Liên hiệp quốc dân Việt Nam (Hội Liên Việt) do ai làm Hội trưởng?|Huỳnh Thúc Kháng|Nguyễn Hải Thần|Phạm Văn Đồng|Hồ Chí Minh|Cuối 1946 có hơn 8 vạn bộ đội chính quy.
+#Mục 2.1d|Sách lược chống thù trong, giặc ngoài|1945–1946
+Giai đoạn từ 9/1945 đến trước 6/3/1946, Đảng chủ trương gì?|Hòa Tưởng ở Bắc để tập trung chống Pháp ở Nam|Hòa Pháp để đuổi quân Tưởng|Đánh cả Tưởng và Pháp|Hòa với cả Tưởng và Pháp
+Đảng nhường bao nhiêu ghế Quốc hội không qua bầu cử cho Việt Quốc, Việt Cách?|70 ghế|50 ghế|100 ghế|20 ghế|Đồng thời cung cấp lương thực, chấp nhận tiền Quan kim, Quốc tệ.
+Ngày 11/11/1945, Đảng ra văn bản nào và hoạt động dưới danh nghĩa nào?|Thông cáo "tự ý tự giải tán"; Hội nghiên cứu chủ nghĩa Mác ở Đông Dương|Chỉ thị Kháng chiến kiến quốc; Hội Liên Việt|Thông cáo "tự ý tự giải tán"; Mặt trận Việt Minh|Chỉ thị Hòa để tiến; Hội Văn hóa cứu quốc
+Giai đoạn từ 6/3/1946 đến 12/1946, Đảng chủ trương gì?|Hòa Pháp để đuổi quân Tưởng về nước|Hòa Tưởng để chống Pháp|Đánh Pháp ngay|Đánh Tưởng ngay
+Hiệp ước Hoa - Pháp ký ngày nào, và Chỉ thị Tình hình và chủ trương (3/3/1946) quyết định gì?|28/2/1946; "dàn hòa với Pháp"|6/3/1946; "toàn dân kháng chiến"|28/2/1946; "hòa Tưởng"|3/3/1946; "kháng chiến kiến quốc"
+Hiệp định Sơ bộ 6/3/1946: Pháp công nhận Việt Nam là gì?|Một quốc gia tự do|Một nước độc lập hoàn toàn|Một nước tự trị|Một nước thuộc địa
+Theo Hiệp định Sơ bộ, bao nhiêu quân Pháp được ra Bắc, rút dần trong mấy năm?|15.000 quân; 5 năm|20.000 quân; 3 năm|15.000 quân; 10 năm|50.000 quân; 5 năm
+Chỉ thị Hòa để tiến ra ngày nào?|9/3/1946|3/3/1946|6/3/1946|14/9/1946|Sau đó đàm phán tại Hội nghị Đà Lạt và Fontainebleau.
+Tạm ước 14/9/1946 nhằm mục đích gì?|Nhân nhượng thêm kinh tế, văn hóa để kéo dài hòa bình, chuẩn bị thực lực|Chấm dứt kháng chiến|Cắt đất cho Pháp|Công nhận Nam Kỳ tự trị|Do Chủ tịch Hồ Chí Minh ký.
+Vụ án số 7 phố Ôn Như Hầu (12/7/1946) đập tan âm mưu của ai?|Đại Việt - Quốc dân đảng câu kết với Pháp|Việt Quốc, Việt Cách|Quân Tưởng|Quân Nhật
+#Mục 2.2|Kháng chiến toàn quốc và các chiến dịch|1946–1950
+Chỉ thị Toàn dân kháng chiến ra ngày nào?|12/12/1946|19/12/1946|25/11/1945|15/10/1947|Pháp gửi tối hậu thư đòi giải giáp tự vệ ngày 18/12/1946.
+Lời kêu gọi toàn quốc kháng chiến của Hồ Chí Minh ra vào tối ngày nào?|19/12/1946|12/12/1946|6/3/1946|2/9/1945
+Quân dân Hà Nội chiến đấu giam chân địch trong thành phố bao lâu?|60 ngày đêm|75 ngày đêm|56 ngày đêm|30 ngày đêm
+Mục tiêu kháng chiến chống Pháp là gì?|Đánh đuổi thực dân Pháp, giành độc lập, tự do, thống nhất hoàn toàn|Giành độc lập từng phần|Xây dựng chủ nghĩa xã hội|Hòa hoãn lâu dài
+Phương châm kháng chiến chống Pháp là gì?|Toàn dân, toàn diện, lâu dài, dựa vào sức mình là chính|Đánh nhanh thắng nhanh|Tổng khởi nghĩa|Dựa vào viện trợ quốc tế
+Trong kháng chiến toàn diện, mặt nào giữ vai trò quyết định?|Quân sự|Chính trị|Kinh tế|Ngoại giao
+Kháng chiến "lâu dài" nhằm mục đích gì?|Vừa đánh vừa chuyển hóa so sánh lực lượng từ yếu thành mạnh|Kết thúc chiến tranh nhanh|Chờ viện trợ nước ngoài|Tránh đối đầu với địch
+Tác phẩm nào (8/1947) hệ thống hóa hoàn chỉnh đường lối kháng chiến?|Kháng chiến nhất định thắng lợi (Trường Chinh)|Vấn đề dân cày|Đường Cách mệnh|Tự chỉ trích
+Chiến dịch Việt Bắc thu-đông 1947: Pháp huy động bao nhiêu quân, ta chiến đấu bao lâu?|15.000 quân; 75 ngày đêm|20.000 quân; 60 ngày đêm|50.000 quân; 56 ngày đêm|15.000 quân; 30 ngày đêm|Ngày 15/10/1947 có Chỉ thị "Phải phá tan cuộc tấn công mùa đông của giặc Pháp".
+Kết quả chiến dịch Việt Bắc thu-đông 1947 là gì?|Đánh bại chiến lược "đánh nhanh, thắng nhanh" của Pháp|Giải phóng Hà Nội|Kết thúc chiến tranh|Phá vỡ vòng vây biên giới
+Chiến dịch Biên giới thu-đông 1950 diễn ra khi nào, ai trực tiếp ra mặt trận chỉ đạo?|16/9–17/10/1950; Hồ Chí Minh|13/3–7/5/1954; Võ Nguyên Giáp|16/9–17/10/1950; Trường Chinh|7/1947; Hồ Chí Minh
+Kết quả chiến dịch Biên giới 1950 là gì?|Giành thế chủ động chiến lược trên chiến trường chính Bắc Bộ|Kết thúc chiến tranh|Giải phóng Hà Nội|Giải phóng Điện Biên Phủ|Khai thông biên giới Việt - Trung, mở rộng căn cứ địa Việt Bắc.
+#Mục 2.3a|Đại hội II và phát triển thực lực kháng chiến|1951–1953
+Đại hội II của Đảng họp khi nào, ở đâu?|11–19/2/1951, Chiêm Hóa (Tuyên Quang)|3/1935, Ma Cao|9/1960, Hà Nội|12/1976, Hà Nội
+Đại hội II quyết định gì về tên gọi và hoạt động của Đảng ở Việt Nam?|Ra hoạt động công khai lấy tên Đảng Lao động Việt Nam|Đổi tên thành Đảng Cộng sản Việt Nam|Giữ tên Đảng Cộng sản Đông Dương|Giải tán Đảng|Quyết định lập ở mỗi nước Đông Dương một đảng riêng.
+Ai được bầu làm Chủ tịch Đảng và Tổng Bí thư tại Đại hội II?|Hồ Chí Minh; Trường Chinh|Trường Chinh; Hồ Chí Minh|Lê Hồng Phong; Hồ Chí Minh|Hồ Chí Minh; Lê Duẩn
+Tính chất xã hội Việt Nam theo Chính cương 1951 là gì?|Dân chủ nhân dân, một phần thuộc địa và nửa phong kiến|Thuộc địa nửa phong kiến|Xã hội chủ nghĩa|Tư bản chủ nghĩa
+Nhiệm vụ chính trong Chính cương 1951 là gì, và triển vọng ra sao?|Giải phóng dân tộc; tiến lên chủ nghĩa xã hội|Cải cách ruộng đất; tiến lên chủ nghĩa tư bản|Xóa bỏ tàn tích phong kiến; dừng ở dân chủ nhân dân|Xây dựng chủ nghĩa xã hội; liên bang Đông Dương|Động lực: công nhân, nông dân, tiểu tư sản, tư sản dân tộc.
+Các chiến dịch 1951–1953 gồm những chiến dịch nào?|Hòa Bình (12/1951), Tây Bắc (1952), Thượng Lào (1953)|Việt Bắc, Biên giới, Điện Biên Phủ|Hòa Bình (1947), Tây Bắc (1953)|Biên giới (1951), Hòa Bình (1953)
+Hội nghị Trung ương 3 (4/1952) đề ra chủ trương gì?|"Chỉnh Đảng, chỉnh quân"|"Giảm tô, giảm tức"|"Tăng gia sản xuất"|"Toàn dân kháng chiến"
+Hội nghị Trung ương 5 (11/1953) thông qua văn kiện nào?|Cương lĩnh ruộng đất|Chính cương Đảng|Luật hôn nhân|Hiến pháp
+Luật Cải cách ruộng đất do Chủ tịch Hồ Chí Minh ký ban hành ngày nào?|19/12/1953|9/11/1946|11/1953|2/3/1946|Thực hiện "người cày có ruộng".
+#Mục 2.3b|Điện Biên Phủ, Giơnevơ và bài học|1953–1954
+Kế hoạch Nava của Pháp - Mỹ ra đời khi nào?|7/1953|12/1953|3/1954|9/1950
+Trong Kế hoạch Nava, Điện Biên Phủ được xây dựng thành gì?|Tập đoàn cứ điểm mạnh nhất Đông Dương, hòng "chuyển bại thành thắng" trong 18 tháng|Căn cứ phòng thủ nhỏ|Cứ điểm hậu cần|Căn cứ tiếp tế Lào
+Chủ trương Đông Xuân 1953–1954 là gì?|Tiến công vào hướng chiến lược quan trọng mà địch tương đối yếu, buộc địch phân tán lực lượng|Tập trung đánh Điện Biên Phủ ngay|Chuyển sang phòng ngự|Hòa đàm với Pháp
+Bộ Chính trị quyết định mở chiến dịch Điện Biên Phủ ngày nào?|6/12/1953|13/3/1954|7/5/1954|19/12/1953
+Ai là Tư lệnh kiêm Bí thư Đảng ủy chiến dịch Điện Biên Phủ?|Đại tướng Võ Nguyên Giáp|Hồ Chí Minh|Trường Chinh|Phạm Văn Đồng
+Phương châm tác chiến ở Điện Biên Phủ thay đổi thế nào?|Từ "đánh nhanh, thắng nhanh" sang "đánh chắc, tiến chắc"|Từ "đánh chắc, tiến chắc" sang "đánh nhanh, thắng nhanh"|Giữ nguyên "đánh nhanh, thắng nhanh"|Chuyển sang đánh du kích
+Chiến dịch Điện Biên Phủ diễn ra thời gian nào, bao nhiêu ngày đêm, bắt sống ai?|13/3–7/5/1954; 56 ngày đêm; tướng Đờ Cát|16/9–17/10/1950; 56 ngày đêm; tướng Nava|13/3–7/5/1954; 75 ngày đêm; tướng Đờ Cát|6/12/1953–7/5/1954; 60 ngày đêm; tướng Nava
+Hiệp định Giơnevơ ký ngày nào, ai là Trưởng đoàn Việt Nam Dân chủ Cộng hòa?|21/7/1954; Phạm Văn Đồng|7/5/1954; Võ Nguyên Giáp|27/1/1973; Lê Đức Thọ|21/7/1954; Hồ Chí Minh
+Một ý nghĩa của Hiệp định Giơnevơ là gì?|Chấm dứt chiến tranh xâm lược của Pháp, giải phóng hoàn toàn miền Bắc|Thống nhất đất nước|Mỹ rút hết quân|Giải phóng miền Nam
+Ý nghĩa lịch sử của cuộc kháng chiến chống Pháp là gì?|Mở đầu sự sụp đổ của chủ nghĩa thực dân cũ trên thế giới|Mở đầu sự sụp đổ của chủ nghĩa thực dân mới|Hoàn thành thống nhất đất nước|Giải phóng toàn Đông Dương
+Bài học kinh nghiệm về xây dựng lực lượng vũ trang trong kháng chiến chống Pháp là gì?|Xây dựng lực lượng vũ trang 3 thứ quân|Chỉ xây dựng bộ đội chủ lực|Chỉ xây dựng dân quân du kích|Dựa hoàn toàn vào viện trợ|Còn có: kết hợp kháng chiến với kiến quốc; coi trọng xây dựng, chỉnh đốn Đảng.
+`;
+const U=[];
+RAW.split('\n').forEach(l=>{l=l.trim();if(!l)return;const p=l.split('|');if(l[0]==='#'){const s=p[0].slice(1);U.push({s:s,n:p[1],p:p[2],q:[],c:s.indexOf('Mục 2')===0?1:0})}else{U[U.length-1].q.push([p[0],[p[1],p[2],p[3],p[4]],0,p[5]||''])}});
+const NODES=[];
+U.forEach((u,i)=>{const n=u.q.length,m=Math.ceil(n/6);u.nodes=[];for(let k=0;k<m;k++){const x=Math.round(k*n/m),y=Math.round((k+1)*n/m);u.nodes.push({id:i+'-'+k,u:i,l:'Bài '+(k+1),q:u.q.slice(x,y)})}u.nodes.push({id:i+'-r',u:i,l:'Ôn mục',q:null,r:1});NODES.push(...u.nodes)});
+const CH=[
+{n:'Chương 1',s:'Đảng ra đời và giành chính quyền',t:'Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền',p:'1930–1945'},
+{n:'Chương 2 (nửa đầu)',s:'Xây dựng chính quyền và kháng chiến chống Pháp',t:'Đảng lãnh đạo xây dựng, bảo vệ chính quyền và kháng chiến chống Pháp',p:'1945–1954'}];
+const LOGO='<svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#C21F2E"/><polygon points="20,7 23.5,16 33,16.6 25.7,22.6 28.1,32 20,26.8 11.9,32 14.3,22.6 7,16.6 16.5,16" fill="#F2B705"/></svg>';
+const HEART='<svg width="22" height="20" viewBox="0 0 24 22" aria-hidden="true"><path fill="currentColor" d="M12 21s-9-5.7-9-12A5 5 0 0 1 12 6a5 5 0 0 1 9 3c0 6.3-9 12-9 12z"/></svg>';
+
+const K='sudang-v2';
+let S={xp:0,streak:0,last:'',done:{},sound:true,ch:0},L=null;
+try{const r=localStorage.getItem(K);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const A=document.getElementById('app');
+const fmt=d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+const shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function prep(q){let idx=q[1].map((_,i)=>i);if(idx.length>2)shuf(idx);return{t:q[0],o:idx.map(i=>q[1][i]),a:idx.indexOf(q[2]),e:q[3]}}
+function streakNow(){const t=fmt(new Date()),y=fmt(new Date(Date.now()-864e5));return(S.last===t||S.last===y)?S.streak:0}
+function starsOf(id){const v=S.done[id];return v?(typeof v==='number'?v:1):0}
+const top0=()=>window.scrollTo(0,0);
+
+// Âm thanh tổng hợp bằng Web Audio, không cần tải file
+let AC=null;
+function ac(){try{if(!AC)AC=new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch(e){}return AC}
+function tone(f,t0,d,type,vol){const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain(),t=c.currentTime+t0;o.type=type;o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+.05)}
+const SFX={
+tap(){tone(520,0,.06,'sine',.08)},
+ok(){tone(659,0,.15,'triangle',.22);tone(988,.1,.3,'triangle',.22)},
+bad(){tone(196,0,.2,'sawtooth',.1);tone(139,.15,.35,'sawtooth',.1)},
+win(){[523,659,784,1047].forEach((f,i)=>tone(f,i*.12,.3,'triangle',.2));tone(1319,.5,.6,'triangle',.18)},
+lose(){[330,262,196].forEach((f,i)=>tone(f,i*.2,.4,'sawtooth',.09))}};
+function snd(n){if(S.sound!==false)SFX[n]()}
+function toggleSnd(){S.sound=!(S.sound!==false);save();snd('tap');(L&&!L.over)?draw():home()}
+function setCh(i){S.ch=i;save();snd('tap');home()}
+
+function chProg(c){const ns=NODES.filter(n=>U[n.u].c===c);return[ns.filter(n=>starsOf(n.id)>0).length,ns.length]}
+
+function home(){
+  L=null;const c=S.ch||0;
+  let h='<div class="wrap ch'+c+'"><header class="hd"><div class="brand">'+LOGO+'<div><b>Sử Đảng</b><small>Ôn tập từng bài</small></div></div><div class="chips"><button class="chip" onclick="toggleSnd()" aria-label="Bật hoặc tắt âm thanh">'+(S.sound!==false?'🔊':'🔇')+'</button><span class="chip" title="Chuỗi ngày học">🔥 '+streakNow()+'</span><span class="chip" title="Điểm kinh nghiệm">★ '+S.xp+'</span></div></header><div class="tabs" role="tablist">';
+  CH.forEach((x,i)=>{const p=chProg(i);h+='<button role="tab" aria-selected="'+(i===c)+'" class="tab t'+i+(i===c?' on':'')+'" onclick="setCh('+i+')"><small>'+x.n+'</small><b>'+x.s+'</b><span class="tp"><i style="width:'+(p[1]?p[0]/p[1]*100:0)+'%"></i></span><em>'+x.p+' · '+p[0]+'/'+p[1]+' bài</em></button>'});
+  h+='</div><div class="chhead"><small>'+CH[c].n+' · '+CH[c].p+'</small><h1>'+CH[c].t+'</h1></div>';
+  let first=true;
+  U.forEach((u,i)=>{
+    if(u.c!==c)return;
+    const dn=u.nodes.filter(n=>starsOf(n.id)>0).length;
+    h+='<section class="unit"><div class="ban"><div><small>'+u.s+' · '+u.q.length+' câu</small><b>'+u.n+'</b></div><span>'+u.p+'<small>'+dn+'/'+u.nodes.length+' bài</small></span></div><div class="path">';
+    u.nodes.forEach((n,k)=>{
+      const st=starsOf(n.id),done=st>0,open=k===0||starsOf(u.nodes[k-1].id)>0;
+      let go=false;if(open&&!done&&first){go=true;first=false}
+      const cls=done?'done':open?'cur':'lock';
+      h+='<div class="nw"><button class="node '+cls+(go?' go':'')+'" '+(open?'':'disabled')+' aria-label="'+u.s+', '+n.l+'" onclick="start(\''+n.id+'\')">'+(done?'✓':n.r?'Ôn':k+1)+'</button><div class="lbl"><b>'+n.l+'</b><span>'+(n.r?'8 câu ngẫu nhiên':n.q.length+' câu')+'</span>'+(done?'<i class="stars">'+'★'.repeat(st)+'☆'.repeat(3-st)+'</i>':go?'<i class="gl">Học tiếp</i>':'')+'</div></div>';
+    });
+    h+='</div></section>';
+  });
+  A.innerHTML=h+'</div>';top0();
+}
+
+function start(id){
+  const n=NODES.find(x=>x.id===id);
+  const qs=n.q||shuf(U[n.u].q.slice()).slice(0,8);
+  L={n:n,qs:qs.map(prep),total:qs.length,right:0,first:0,hearts:5,sel:null,checked:false,ok:false,dead:false,over:false};
+  draw();top0();
+}
+
+function draw(){
+  const c=L.qs[0],u=U[L.n.u];
+  let h='<div class="wrap ch'+u.c+'"><div class="top"><button class="x" aria-label="Thoát bài học" onclick="home()">✕</button><div class="bar"><i style="width:'+(L.right/L.total*100)+'%"></i></div><button class="x" aria-label="Bật hoặc tắt âm thanh" onclick="toggleSnd()">'+(S.sound!==false?'🔊':'🔇')+'</button><div class="hearts" aria-label="Số tim còn lại">'+HEART+'<span>'+L.hearts+'</span></div></div><main class="qcard"><div class="qtag">'+u.s+' · '+L.n.l+'</div><h2>'+c.t+'</h2>';
+  c.o.forEach((o,i)=>{
+    let cl='opt';
+    if(L.checked){if(i===c.a)cl+=' ok'+(L.ok?' pop':'');else if(i===L.sel)cl+=' bad shake'}else if(i===L.sel)cl+=' sel';
+    h+='<button class="'+cl+'" '+(L.checked?'disabled':'')+' onclick="pick('+i+')"><span class="k">'+'ABCD'[i]+'</span><span>'+o+'</span></button>';
+  });
+  h+='</main></div><footer class="foot '+(L.checked?(L.ok?'ok':'bad'):'')+'"><div class="in">';
+  if(L.checked){
+    h+='<div class="fbh"><span class="ico">'+(L.ok?'✓':'✕')+'</span><b>'+(L.ok?'Chính xác!':L.dead?'Hết tim rồi':'Chưa đúng')+'</b></div><div class="fb">'+(L.ok?'':'Đáp án đúng: '+c.o[c.a]+'. ')+c.e+(L.ok||L.dead?'':' Câu này sẽ quay lại ở cuối bài.')+'</div>';
+  }
+  h+='<button class="btn '+(L.checked&&!L.ok?'red':'')+'" '+(!L.checked&&L.sel===null?'disabled':'')+' onclick="'+(L.checked?'next()':'check()')+'">'+(L.checked?(L.dead?'Xem kết quả':'Tiếp tục'):'Kiểm tra')+'</button></div></footer>';
+  A.innerHTML=h;
+}
+function pick(i){if(L.checked||L.over)return;L.sel=i;snd('tap');draw()}
+function check(){
+  if(L.sel===null||L.checked||L.over)return;
+  const c=L.qs[0];
+  L.checked=true;L.ok=L.sel===c.a;
+  if(L.ok){L.right++;if(!c.retry)L.first++;snd('ok')}
+  else{L.hearts--;L.qs.push({t:c.t,o:c.o,a:c.a,e:c.e,retry:true});if(L.hearts<=0)L.dead=true;snd('bad');try{navigator.vibrate&&navigator.vibrate(120)}catch(e){}}
+  draw();
+}
+function next(){
+  if(L.dead)return fail();
+  L.qs.shift();
+  if(!L.qs.length)return finish();
+  L.sel=null;L.checked=false;draw();top0();
+}
+function fail(){
+  L.over=true;snd('lose');
+  A.innerHTML='<div class="wrap res"><div class="badge h">♥</div><h1>Hết tim rồi</h1><p>Đọc lại các giải thích rồi thử lại, bạn sẽ nhớ nhanh hơn.</p><button class="btn red" onclick="start(\''+L.n.id+'\')">Học lại bài này</button><button class="btn ghost" onclick="home()">Về bản đồ</button></div>';
+  top0();
+}
+function finish(){
+  const gain=L.first*10+(L.total-L.first)*5,acc=Math.round(L.first/L.total*100),st=acc>=90?3:acc>=70?2:1;
+  const t=fmt(new Date()),y=fmt(new Date(Date.now()-864e5));
+  if(S.last!==t){S.streak=(S.last===y)?S.streak+1:1;S.last=t}
+  S.xp+=gain;S.done[L.n.id]=Math.max(starsOf(L.n.id),st);save();
+  L.over=true;snd('win');
+  let cf='';for(let i=0;i<26;i++)cf+='<i class="cf" style="left:'+Math.round(Math.random()*100)+'%;background:'+['#F2B705','#C21F2E','#2E9E5B','#2D5B3D'][i%4]+';animation-delay:'+(Math.random()*.7).toFixed(2)+'s"></i>';
+  A.innerHTML=cf+'<div class="wrap res ch'+U[L.n.u].c+'"><div class="badge">★</div><div class="rs">'+'★'.repeat(st)+'<span style="opacity:.3">'+'★'.repeat(3-st)+'</span></div><h1>Hoàn thành bài học!</h1><p>'+(acc>=80?'Bạn nhớ rất chắc phần này.':'Chưa chắc ở vài ý, bài Ôn mục sẽ giúp bạn củng cố.')+'</p><div class="stats"><div class="st"><b>+'+gain+'</b><small>XP</small></div><div class="st"><b>'+acc+'%</b><small>đúng ngay lần đầu</small></div></div><button class="btn" onclick="home()">Tiếp tục</button></div>';
+  top0();
+}
+addEventListener('keydown',e=>{
+  if(!L||L.over)return;
+  if(e.key>='1'&&e.key<='4'&&!L.checked){const i=+e.key-1;if(i<L.qs[0].o.length)pick(i)}
+  else if(e.key==='Enter'){const b=document.querySelector('.foot .btn');if(b&&!b.disabled)b.click()}
+});
+home();
+</script>
+</body>
+</html>
